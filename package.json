@@ -1,0 +1,15 @@
+{
+  "name": "ace-nexus",
+  "version": "1.0.0",
+  "description": "Ace Nexus - Online Student Result Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "import:firebase": "node scripts/import-firebase.js",
+    "import:csv": "node scripts/import-csv.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.0.0",
+    "mysql2": "^3.12.0"
+  }
+}

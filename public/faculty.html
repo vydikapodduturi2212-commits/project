@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ace Nexus | Faculty Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body data-role="faculty">
+    <div class="page-shell dashboard-shell">
+      <main class="app">
+        <header class="app-header panel">
+          <div>
+            <p id="role-badge" class="eyebrow"></p>
+            <h2 id="welcome-title"></h2>
+            <p>Enter marks, review student performance, and publish results.</p>
+          </div>
+          <div class="header-actions">
+            <button id="logout-button" class="ghost-button">Logout</button>
+          </div>
+        </header>
+
+        <section id="summary-cards" class="summary-grid"></section>
+
+        <section class="dashboard-grid">
+          <article class="panel wide-panel">
+            <div class="panel-head">
+              <h3>Faculty Dashboard</h3>
+              <p>Performance metrics and active result cycles.</p>
+            </div>
+            <div id="analytics" class="analytics-grid"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Notifications</h3>
+              <p>Recent updates across the platform.</p>
+            </div>
+            <div id="notifications" class="notification-list"></div>
+          </article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Filters</h3>
+              <p>Search by roll number, semester, or branch.</p>
+            </div>
+            <form id="filter-form" class="stack compact">
+              <label>Roll Number<input name="rollNumber" type="text" /></label>
+              <label>Semester<input name="semester" type="number" min="1" max="8" /></label>
+              <label>Branch<input name="branch" type="text" /></label>
+              <button type="submit" class="primary-button">Apply Filters</button>
+            </form>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h3>Result Publisher</h3>
+            <p>Enter subject-wise marks and publish results.</p>
+          </div>
+          <form id="results-form" class="stack">
+            <label>Student<select id="result-student" required></select></label>
+            <div id="subject-mark-grid" class="marks-grid"></div>
+            <button type="submit" class="primary-button">Publish Result</button>
+          </form>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head results-head">
+            <div>
+              <h3>Results</h3>
+              <p>Browse student results and performance.</p>
+            </div>
+            <button id="export-button" class="ghost-button">Export CSV</button>
+          </div>
+          <div id="results-container"></div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/dashboard.js"></script>
+  </body>
+</html>

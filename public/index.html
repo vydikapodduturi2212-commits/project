@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ace Nexus | Student Result Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="login-brand">
+        <div class="brand-lockup">
+          <p class="eyebrow brand-title">ACE NEXUS</p>
+        </div>
+      </header>
+
+      <section class="login-layout">
+        <div class="login-card centered-login">
+          <div class="card-head">
+            <h2>Secure Login</h2>
+            <p>Role-based access for admin, faculty, and students.</p>
+          </div>
+          <form id="login-form" class="stack">
+            <label>
+              Roll Number
+              <input id="rollNumber" name="rollNumber" type="text" required />
+            </label>
+            <label>
+              Password
+              <input id="password" name="password" type="password" required />
+            </label>
+            <button class="primary-button" type="submit">Sign In</button>
+            <p id="login-error" class="error-text" hidden></p>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

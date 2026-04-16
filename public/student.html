@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ace Nexus | Student Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body data-role="student">
+    <div class="page-shell dashboard-shell">
+      <main class="app">
+        <header class="app-header panel">
+          <div>
+            <p id="role-badge" class="eyebrow"></p>
+            <h2 id="welcome-title"></h2>
+            <p>View your marks, grades, GPA, and downloadable result sheet.</p>
+          </div>
+          <div class="header-actions">
+            <button id="print-result" class="ghost-button">Print / Save PDF</button>
+            <button id="logout-button" class="ghost-button">Logout</button>
+          </div>
+        </header>
+
+        <section id="summary-cards" class="summary-grid"></section>
+
+        <section class="dashboard-grid">
+          <article class="panel wide-panel">
+            <div class="panel-head">
+              <h3>Student Dashboard</h3>
+              <p>Your academic progress at a glance.</p>
+            </div>
+            <div id="analytics" class="analytics-grid"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Notifications</h3>
+              <p>Recent result publication updates.</p>
+            </div>
+            <div id="notifications" class="notification-list"></div>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head results-head">
+            <div>
+              <h3>My Results</h3>
+              <p>Your semester result, grades, and GPA summary.</p>
+            </div>
+            <button id="export-button" class="ghost-button">Export CSV</button>
+          </div>
+          <div id="results-container"></div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/dashboard.js"></script>
+  </body>
+</html>
